@@ -167,6 +167,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    #underline {
+        text-decoration: underline;
+    }
+
     .row {
         flex-direction: column;
         text-align: center;
