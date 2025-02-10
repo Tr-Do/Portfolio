@@ -23,6 +23,12 @@
                 </a>
             </li>
             <li>
+                <a data-section="about">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="nav-text">About Me</span>
+                </a>
+            </li>
+            <li>
                 <a data-section="education">
                     <i class="fas fa-graduation-cap"></i>
                     <span class="nav-text">Education</span>
@@ -59,26 +65,45 @@
         <h2 id="1"></h2>
     </section>
 
+    <section id="about" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 section-title text-center">About me</div>
+                <div class="col-md-6 py-3 section-content">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla hic porro, accusantium
+                            impedit iusto in dolor, cupiditate inventore, unde nihil magni? Numquam deserunt tempore
+                            explicabo reprehenderit, rerum eius dolore?
+                            Dignissimos labore non voluptatem dolore totam. Quam harum illum quaerat assumenda totam
+                            repellendus natus facere voluptas quod obcaecati, accusantium aliquam fugit similique
+                            molestias ipsum molestiae minus? Labore quas maiores quo.
+
+                            Illum, et ullam ea fugit nesciunt praesentium est modi quidem necessitatibus natus tenetur
+                            debitis quibusdam cupiditate nulla? Eveniet, totam beatae ratione dolorum quos nihil
+                            explicabo eum autem illum quam ut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="education" class="content-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 mb-sm-5 section-title text-center align-items-center">Education</div>
                 <div class="col-md-7 section-content">
-                    <h4 class="mb-2 text-center"><strong>Bachelor Degree in Computer Science</strong></h4>
+                    <h4 class="mb-sm-5 mb-2 text-center"><strong>Bachelor Degree in Computer Science</strong></h4>
                     <div class="container py-sm-5">
-                        <p class="text-center my-sm-3 my-md-5">Course of study:</p>
+                        <p class="text-center mt-sm-5 my-md-5">Course of study</p>
                         <div id="innerRow" class="row">
                             <div class="col-md-6">
                                 <ul>
                                     <li>Web Development</li>
-
                                     <li>Cyber & Computer Security</li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
                                 <ul>
                                     <li>Data Structure & Algorithm</li>
-
                                     <li>Object Oriented Programming</li>
                                 </ul>
                             </div>
@@ -91,10 +116,10 @@
     <section id="skills" class="content-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 mb-sm-5 section-title text-center">Skills</div>
+                <div class="col-md-6 mb-sm-5 py-sm-5 section-title text-center">Skills</div>
                 <div class="col-md-3 section-content">
                     <div id="innerRow" class=" d-lg-inline-flex">
-                        <div class="col-md-6 text-center text-lg-start mb-md-5 ">
+                        <div class="col-md-6 text-center text-lg-start mb-md-5">
                             <p><strong>Language:</strong></p>
                         </div>
                         <div class="col-md-6 text-center w-100 mb-sm-5 ">
@@ -135,13 +160,16 @@
                 <div class="col-md-6 mb-5 section-title text-center">Projects</div>
                 <div class="col-md-6 py-3 section-content">
                     <div class="mb-5">
-                        <p>Portfolio Page</p>
+                        <p><a href="https://tr-do.github.io/Pokedex/" target="_blank">Pokedex</a></p>
+                    </div>
+                    <div class="mb-5">
+                        <p><a href="https://tr-do.github.io/RelaxingNoise/" target="_blank">Relaxing Noise</a></p>
+                    </div>
+                    <div class="mb-5">
+                        <p><a href="https://yelp-camp-itk2.onrender.com/" target="_blank">Camping Site</a></p>
                     </div>
                     <div class="mb-5">
                         <p>SVD Code Smell App (Group Project)</p>
-                    </div>
-                    <div class="mb-5">
-                        <p>Camping Mockup Website</p>
                     </div>
                 </div>
             </div>
@@ -150,23 +178,24 @@
     <section class="content-section" id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-3 section-content text-center ms-lg-auto">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-md-12 d-md-block-flex d-lg-inline-flex justify-content-between w-100">
-                            <p><strong>Email:</strong></p>
-                            <p><span class="redacted" id="email">Click to Reveal</span></p>
-                        </div>
+                <div class="col-sm-6 col-md-3 section-content text-center text-md-start d-flex flex-column gap-lg-4">
+                    <div class="col-md-12 sm-mb-3 d-md-flex justify-content-between w-100 align-items-center">
+                        <p><strong>Email:</strong></p>
+                        <p class="d-inline-block">
+                            <span class="redacted" id="email">Click to Reveal</span>
+                        </p>
                     </div>
-                    <div class="row d-flex align-items-center">
+                    <div class="col-md-12 sm-mb-3 d-md-flex justify-content-between w-100 align-items-center">
                         <div class="col-md-12 d-md-block-flex d-lg-inline-flex justify-content-between w-100">
                             <p><strong>LinkedIn:</strong></p>
-                            <p><span class="redacted" id="email">Click to Reveal</span></p>
+                            <p><span class="redacted" id="linkedin">Click to Reveal</span></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 section-title text-center">
-                    <div class="container ms-3">
-                        <div class="row justify-content-center">
+
+                <div class="col-md-6 section-title text-end">
+                    <div class="container">
+                        <div class="row justify-content-end">
                             <div class="col-md-8">
                                 <h2 class="text-center mb-4">Contact Me</h2>
                                 <form id="contactForm">
@@ -180,24 +209,26 @@
                                     </div>
                                     <div class="mb-3">
                                         <textarea class="form-control" id="message" name="message" rows="4"
-                                            placeholder="Your message..." required></textarea>
+                                            placeholder="Your message" required></textarea>
                                     </div>
-                                    <div class="form-check d-flex align-items-center justify-content-center"
-                                        style="gap: 6px;">
+                                    <div class="form-check d-flex align-items-center justify-content-center gap-2">
                                         <input type="checkbox" class="form-check-input" id="agreeCheckbox"
                                             style="transform: scale(0.6); margin-top: 0;">
-                                        <label class="form-check-label" for="agreeCheckbox" style="font-size: 14px;">I
-                                            AM NOT A ROBOT</label>
+                                        <label class="form-check-label" for="agreeCheckbox" style="font-size: 14px;">
+                                            I AM NOT A ROBOT
+                                        </label>
                                     </div>
                                     <div id="response-message" class="text-center mt-3">
-                                        <button type="submit" class="btn btn-primary" id="submitButton" disabled>Send
-                                            Message</button>
+                                        <button type="submit" class="btn btn-primary" id="submitButton" disabled>
+                                            Send Message
+                                        </button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

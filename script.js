@@ -1,40 +1,58 @@
-const fname = 'adfdsafdafdsaf';
 const text = ["</ Github >", "Software Engineer"];
 let index = 0;
-let a = 0
+let a = 0;
 
 document.addEventListener("scroll", function () {
     let navbar = document.querySelector(".vertical-navbar");
     navbar.style.top = window.scrollY + 340 + "px";
 });
 
+let isNavbarScrolling = false;
+
+// Add Click Event for Navbar Links
 document.querySelectorAll('.vertical-navbar a').forEach(navItem => {
     navItem.addEventListener('click', function (event) {
         const sectionId = this.getAttribute('data-section');
 
-        if (sectionId) {
-            event.preventDefault();
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
+        // Prevent active class from applying to external links
+        if (!sectionId) return;
+
+        event.preventDefault();
+        isNavbarScrolling = true;
+
+        // Remove 'active' class from all navbar links
+        document.querySelectorAll(".vertical-navbar a").forEach(link => link.classList.remove("active"));
+
+        // Add 'active' class only to the clicked link
+        this.classList.add("active");
+
+        // Temporarily disable animations
+        document.documentElement.classList.add("disable-animations");
+
+        // Smoothly scroll to the target section
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
         }
+
+        setTimeout(() => {
+            isNavbarScrolling = false;
+            document.documentElement.classList.remove("disable-animations");
+        }, 1000);
     });
 });
-document.querySelectorAll(".redacted").forEach(item => {
-    item.addEventListener("click", function () {
-        const targetId = this.id;
 
-        if (encryptedData[targetId]) {
-            this.textContent = decryptData(encryptedData[targetId]);
-            this.classList.add("revealed");
-        }
-    });
+// Detect manual scrolling and re-enable animations immediately
+window.addEventListener("scroll", () => {
+    if (!isNavbarScrolling) {
+        document.documentElement.classList.remove("disable-animations");
+    }
 });
 
+// Change Active Navbar Link on Scroll
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".vertical-navbar a");
@@ -48,80 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
             const sectionId = section.getAttribute("id");
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-
                 navLinks.forEach((link) => link.classList.remove("active"));
 
-
-                document
-                    .querySelector(`.vertical-navbar a[data-section="${sectionId}"]`)
-                    .classList.add("active");
+                const activeLink = document.querySelector(`.vertical-navbar a[data-section="${sectionId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
             }
         });
     }
     window.addEventListener("scroll", changeActiveNav);
 });
-document.getElementById("contactForm").addEventListener("submit", async function (event) {
-    event.preventDefault();
 
-    const form = event.target;
-    const formData = new FormData(form);
-
-    try {
-        const response = await fetch("https://formspree.io/f/xanqbavb", {
-            method: "POST",
-            headers: {
-                "Accept": "application/json"
-            },
-            body: formData
-        });
-
-        if (response.ok) {
-            document.getElementById("response-message").innerHTML = "<p class='text-success'>Message sent successfully!</p>";
-            form.reset();
-        } else {
-            document.getElementById("response-message").innerHTML = "<p class='text-danger'>Error sending message. Please try again.</p>";
-        }
-    } catch (error) {
-        document.getElementById("response-message").innerHTML = "<p class='text-danger'>Network error. Try again later.</p>";
-    }
-});
-
-const checkbox = document.getElementById("agreeCheckbox");
-const submitButton = document.getElementById("submitButton");
-
-submitButton.disabled = true;
-
-checkbox.addEventListener("change", function () {
-    submitButton.disabled = !this.checked;
-});
-
-document.getElementById("contactForm").addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const formData = new FormData(form);
-
-    try {
-        const response = await fetch("https://formspree.io/f/xanqbavb", {
-            method: "POST",
-            headers: {
-                "Accept": "application/json"
-            },
-            body: formData
-        });
-
-        if (response.ok) {
-            document.getElementById("response-message").innerHTML = "<p class='text-success'>Message sent successfully!</p>";
-            form.reset();
-            submitButton.disabled = true;
-        } else {
-            document.getElementById("response-message").innerHTML = "<p class='text-danger'>Error sending message. Please try again.</p>";
-        }
-    } catch (error) {
-        document.getElementById("response-message").innerHTML = "<p class='text-danger'>Network error. Try again later.</p>";
-    }
-});
-
+// Typing Animation
 function animation() {
     if (a >= text.length) {
         return;
