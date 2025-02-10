@@ -1,6 +1,22 @@
-const text = ["</ Github >", "Software Engineer"];
+const text = ["<\u00A0\u00A0\u00A0TRIEU DO\u00A0\u00A0\u00A0>", "Software Engineer"];
 let index = 0;
 let a = 0;
+
+function animation() {
+    if (a >= text.length) {
+        return;
+    }
+    if (index < text[a].length) {
+        document.getElementById(`${a}`).innerHTML += text[a].charAt(index);
+        index++;
+        setTimeout(animation, 40);
+    } else {
+        document.getElementById(`${a}`).parentElement.style.borderRight = "none";
+        index = 0;
+        a++;
+        animation();
+    }
+}
 
 document.addEventListener("scroll", function () {
     let navbar = document.querySelector(".vertical-navbar");
@@ -93,22 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-function animation() {
-    if (a >= text.length) {
-        return;
-    }
-    if (index < text[a].length) {
-        document.getElementById(`${a}`).innerHTML += text[a].charAt(index);
-        index++;
-        setTimeout(animation, 40);
-    } else {
-        document.getElementById(`${a}`).parentElement.style.borderRight = "none";
-        index = 0;
-        a++;
-        animation();
-    }
-}
 document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.getElementById("agreeCheckbox");
     const submitButton = document.getElementById("submitButton");
@@ -153,8 +153,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-
-
 
 window.onload = animation;

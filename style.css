@@ -1,5 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Outfit", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
     text-align: center;
     margin: 0;
     background-image: url('images/background.jpg');
@@ -142,12 +145,9 @@ body {
     padding-left: 20px;
 }
 
-#innerRow,
-#contact .row {
-    border-left: none !important;
-}
-
 .redacted {
+    display: inline-block;
+    white-space: nowrap;
     background: white;
     color: black;
     cursor: pointer;
@@ -177,10 +177,6 @@ body {
         text-align: center;
         padding-right: 0;
         margin-bottom: 30px;
-    }
-
-    .section-content {
-        padding-left: 0;
     }
 
     .vertical-navbar {
