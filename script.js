@@ -98,7 +98,18 @@ document.addEventListener("DOMContentLoaded", function () {
             element.addEventListener("click", function () {
                 let dataKey = this.id;
                 if (encryptedData[dataKey]) {
-                    this.textContent = decryptData(encryptedData[dataKey]);
+                    let decryptedText = decryptData(encryptedData[dataKey]);
+                    if (isValidURL(decryptedText)) {
+                        let anchor = document.createElement("a");
+                        anchor.href = decryptedText;
+                        anchor.textContent = decryptedText;
+                        anchor.target = "_blank";
+                        this.innerHTML = '';
+                        this.appendChild(anchor);
+                    } else {
+                        this.textContent = decryptedText;
+                    }
+
                     this.classList.remove("redacted");
                     this.classList.add("revealed");
                 }
@@ -108,6 +119,16 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("secureData.js is not loaded properly.");
     }
 });
+
+function isValidURL(str) {
+    try {
+        new URL(str);
+        return true;
+    } catch (_) {
+        return false;
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.getElementById("agreeCheckbox");

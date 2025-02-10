@@ -1,6 +1,6 @@
 const encryptedData = {
-    email: "YWJjZEBnbWFpbC5jb20=",
-    linkedin: "bGlua2VkaW4uY29tL2luL2V4YW1wbGU="
+    email: "dGRvMDJAamFndWFyLnRhbXUuZWR1",
+    linkedin: "aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL3QtZG8tNzI4OTA5MTk0Lw=="
 };
 
 function decryptData(encoded) {
