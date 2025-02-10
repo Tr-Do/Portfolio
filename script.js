@@ -1,4 +1,4 @@
-const text = ["<\u00A0\u00A0\u00A0TRIEU DO\u00A0\u00A0\u00A0>", "Software Engineer"];
+const text = ["</\u00A0\u00A0\u00A0TRIEU DO\u00A0\u00A0\u00A0>", "Software Engineer"];
 let index = 0;
 let a = 0;
 
