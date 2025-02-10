@@ -66,6 +66,18 @@
     <section id="home" class="full-screen d-flex flex-column justify-content-center align-items-center text-white">
         <h1 id="0" class="mb-5"></h1>
         <h2 id="1"></h2>
+        <div class="container">
+            <div class="row border-start-0 section-content">
+                <div class="col-sm-12 col-lg-6 mt-5 d-inline-flex justify-content-around">
+                    <div class="section-content"><strong>Email</strong></div>
+                    <span class="redacted" id="email">Click to Reveal</span>
+                </div>
+                <div class="col-sm-12 col-lg-6 mt-5 d-inline-flex justify-content-around">
+                    <div class="section-content mt-lg-3"><strong>LinkedIn</strong></div>
+                    <span class="redacted ms-3" id="linkedin">Click to Reveal</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="about" class="content-section">
@@ -196,7 +208,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-sm-6 section-title border-start-0">
                     <div class="row justify-content-center border-start-0">
                         <div class="col-md-8 me-md-5">
@@ -207,9 +218,10 @@
                                         placeholder="Your Name" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" id="email" name="email"
-                                        placeholder="Your Email" required>
+                                    <input type="email" class="form-control" placeholder="Your Email" id="emailForm"
+                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
                                 </div>
+
                                 <div class="mb-3">
                                     <textarea class="form-control" id="message" name="message" rows="4"
                                         placeholder="Your message" required></textarea>
