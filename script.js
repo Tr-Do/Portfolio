@@ -9,27 +9,20 @@ document.addEventListener("scroll", function () {
 
 let isNavbarScrolling = false;
 
-// Add Click Event for Navbar Links
 document.querySelectorAll('.vertical-navbar a').forEach(navItem => {
     navItem.addEventListener('click', function (event) {
         const sectionId = this.getAttribute('data-section');
 
-        // Prevent active class from applying to external links
         if (!sectionId) return;
 
         event.preventDefault();
         isNavbarScrolling = true;
 
-        // Remove 'active' class from all navbar links
         document.querySelectorAll(".vertical-navbar a").forEach(link => link.classList.remove("active"));
-
-        // Add 'active' class only to the clicked link
         this.classList.add("active");
 
-        // Temporarily disable animations
         document.documentElement.classList.add("disable-animations");
 
-        // Smoothly scroll to the target section
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
             window.scrollTo({
@@ -45,14 +38,12 @@ document.querySelectorAll('.vertical-navbar a').forEach(navItem => {
     });
 });
 
-// Detect manual scrolling and re-enable animations immediately
 window.addEventListener("scroll", () => {
     if (!isNavbarScrolling) {
         document.documentElement.classList.remove("disable-animations");
     }
 });
 
-// Change Active Navbar Link on Scroll
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".vertical-navbar a");
@@ -77,8 +68,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener("scroll", changeActiveNav);
 });
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".redacted").forEach(element => {
+        element.addEventListener("click", function () {
+            this.classList.remove("redacted");
+            this.classList.add("revealed");
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof encryptedData !== "undefined") {
+        document.querySelectorAll(".redacted").forEach(element => {
+            element.addEventListener("click", function () {
+                let dataKey = this.id;
+                if (encryptedData[dataKey]) {
+                    this.textContent = decryptData(encryptedData[dataKey]);
+                    this.classList.remove("redacted");
+                    this.classList.add("revealed");
+                }
+            });
+        });
+    } else {
+        console.error("secureData.js is not loaded properly.");
+    }
+});
 
-// Typing Animation
+
 function animation() {
     if (a >= text.length) {
         return;
@@ -94,5 +109,52 @@ function animation() {
         animation();
     }
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const checkbox = document.getElementById("agreeCheckbox");
+    const submitButton = document.getElementById("submitButton");
+    const contactForm = document.getElementById("contactForm");
+    const responseMessage = document.createElement("p");
+
+    responseMessage.classList.add("text-success", "fw-bold", "mt-2");
+    responseMessage.style.display = "none";
+
+    submitButton.parentNode.appendChild(responseMessage);
+    checkbox.addEventListener("change", function () {
+        submitButton.disabled = !this.checked;
+    });
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+
+        fetch(contactForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        }).then(response => {
+            if (response.ok) {
+                submitButton.style.display = "none";
+                responseMessage.textContent = "Send message successfully!";
+                responseMessage.style.display = "block";
+                contactForm.reset();
+                checkbox.checked = false;
+            } else {
+                responseMessage.textContent = "Error sending message. Try again.";
+                responseMessage.style.color = "red";
+                responseMessage.style.display = "block";
+            }
+        }).catch(error => {
+            console.error("Error:", error);
+            responseMessage.textContent = "There was a problem submitting the form.";
+            responseMessage.style.color = "red";
+            responseMessage.style.display = "block";
+        });
+    });
+});
+
+
+
 
 window.onload = animation;
