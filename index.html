@@ -1,264 +1,338 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TRIEU DO</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/5303583a7b.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/5303583a7b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <nav class="vertical-navbar">
-        <ul>
-            <li>
-                <a data-section="home">
-                    <i class="fas fa-home"></i>
-                    <span class="nav-text">Home</span>
-                </a>
-            </li>
-            <li>
-                <a data-section="about">
-                    <i class="fa-solid fa-user"></i>
-                    <span class="nav-text">About Me</span>
-                </a>
-            </li>
-            <li>
-                <a data-section="education">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span class="nav-text">Education</span>
-                </a>
-            </li>
-            <li>
-                <a data-section="skills">
-                    <i class="fas fa-code"></i>
-                    <span class="nav-text">Skills</span>
-                </a>
-            </li>
-            <li>
-                <a data-section="projects">
-                    <i class="fa-solid fa-list-check"></i>
-                    <span class="nav-text">Projects</span>
-                </a>
-            </li>
-            <li>
-                <a data-section="contact">
-                    <i class="fas fa-envelope"></i>
-                    <span class="nav-text">Contact</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Tr-Do" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                    <span class="nav-text">Github</span>
-                </a>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <a data-section="home">
+            <i class="fas fa-home"></i>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+        <li>
+          <a data-section="about">
+            <i class="fa-solid fa-user"></i>
+            <span class="nav-text">About Me</span>
+          </a>
+        </li>
+        <li>
+          <a data-section="education">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="nav-text">Education</span>
+          </a>
+        </li>
+        <li>
+          <a data-section="skills">
+            <i class="fas fa-code"></i>
+            <span class="nav-text">Skills</span>
+          </a>
+        </li>
+        <li>
+          <a data-section="projects">
+            <i class="fa-solid fa-list-check"></i>
+            <span class="nav-text">Projects</span>
+          </a>
+        </li>
+        <li>
+          <a data-section="contact">
+            <i class="fas fa-envelope"></i>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Tr-Do" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            <span class="nav-text">Github</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <section id="home" class="full-screen d-flex flex-column justify-content-center align-items-center text-white">
-        <h1 id="0" class="mb-5"></h1>
-        <h2 id="1"></h2>
-        <div class="container">
-            <div class="row border-start-0 section-content">
-                <div class="col-sm-12 col-lg-6 mt-5 d-inline-flex justify-content-around">
-                    <div class="section-content"><strong>Email</strong></div>
-                    <span class="redacted" id="email">Click to Reveal</span>
-                </div>
-                <div class="col-sm-12 col-lg-6 mt-5 d-inline-flex justify-content-around">
-                    <div class="section-content mt-lg-1"><strong>LinkedIn</strong></div>
-                    <span class="redacted ms-3 " id="linkedin">Click to Reveal</span>
-                </div>
-            </div>
+    <section
+      id="home"
+      class="full-screen d-flex flex-column justify-content-center align-items-center text-white"
+    >
+      <h1 id="0" class="mb-5"></h1>
+      <h2 id="1"></h2>
+      <div class="container">
+        <div class="row border-start-0 section-content">
+          <div
+            class="col-sm-12 col-lg-6 mt-5 d-inline-flex justify-content-around"
+          >
+            <div class="section-content"><strong>Email</strong></div>
+            <span class="redacted" id="email">Click to Reveal</span>
+          </div>
+          <div
+            class="col-sm-12 col-lg-6 mt-5 d-inline-flex justify-content-around"
+          >
+            <div class="section-content mt-lg-1"><strong>LinkedIn</strong></div>
+            <span class="redacted ms-3" id="linkedin">Click to Reveal</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="about" class="content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-5 section-title text-center">About me</div>
-                <div class="col-md-6 py-3 section-content">
-                    <div>
-                        <p class="mb-4">Born into a family that values education, I have always loved studying and have
-                            a deep curiosity about the world around me. From an early age, I was fascinated by computers
-                            and machines. Once, I even told my parents that I wanted to become a scientist.
-                        </p>
-                        <p class="mb-4">
-                            Now, as I advance in my education, I plan to specialize in Software and AI, with the
-                            goal of becoming a researcher in the field.
-                        </p>
-                        <p>
-                            In the free time, I enjoy reading books—Animal Farm is one of my favorites.
-                        </p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-5 section-title text-center">About me</div>
+          <div class="col-md-6 py-3 section-content">
+            <div>
+              <p class="mb-4">
+                Born into a family that values education, I always love studying
+                and have a deep curiosity about the world around me. From an
+                early age, I was fascinated by computers and machines. Once, I
+                even told my parents that I wanted to become a scientist.
+              </p>
+              <p class="mb-4">
+                Now, as I advance in my education, I plan to specialize in
+                Software and AI, with the goal of becoming a researcher or an
+                engineerin the field.
+              </p>
+              <p>
+                In the free time, I enjoy reading classic novels — Animal Farm
+                is one of my favorites.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="education" class="content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-sm-5 section-title text-center align-items-center">Education</div>
-                <div class="col-md-8 section-content text-center">
-                    <h4 class="mb-sm-0 mb-0 py-0"><strong>Bachelor of Science in Computer Science</strong></h4>
-                    <h5>(Dec 2026)</h6>
-                        <div class="container">
-                            <h4 id="underline" class="mt-sm-5">Fields of study</h4>
-                            <div class="row border-start-0 ms-2">
-                                <div class="col-md-6">
-                                    <p">Web Development</p>
-                                        <p>Cyber & Computer Security</p>
-                                        <p>Computer Network</p>
-                                </div>
-                                <div class="col-md-6 d-inline mt-md-5">
-                                    <p>Data Structure & Algorithm</p>
-                                    <p>Object Oriented Programming</p>
-                                    <p>Computer Architecture & Organization</p>
-                                </div>
-                            </div>
-                        </div>
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 mb-sm-5 section-title text-center align-items-center"
+          >
+            Education
+          </div>
+          <div class="col-md-8 section-content text-center">
+            <h4 class="mb-sm-0 mb-0 py-0">
+              <strong>Bachelor of Science in Computer Science</strong>
+            </h4>
+            <h5>(Jan 2027)</h5>
+            <div class="container">
+              <h4 id="underline" class="mt-sm-5">Fields of study</h4>
+              <div class="row border-start-0 ms-2">
+                <div class="col-md-6">
+                  <p>Web Development</p>
+                  <p>Cyber & Computer Security</p>
+                  <p>Computer Network</p>
                 </div>
+                <div class="col-md-6 d-inline mt-md-5">
+                  <p>Data Structure & Algorithm</p>
+                  <p>Object Oriented Programming</p>
+                  <p>Computer Architecture & Organization</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="skills" class="content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-sm-5 section-title text-center">Skills</div>
-                <div class="col-md-6 section-content justify-content-center">
-                    <div class="container mb-4 text-center">
-                        <span><strong>Language:</strong></span>
-                        <div class="container mt-3">
-                            <p> C, C++, Java, JavaScript, Python, HTML, CSS, Bash</p>
-                        </div>
-                    </div>
-                    <div class="container mb-4 text-center">
-                        <span><strong>Framework:</strong></span>
-                        <div class="container mt-3">
-                            <p> Express.js, React, Bootstrap, Bulma</p>
-                        </div>
-                    </div>
-                    <div class="container mb-4 text-center">
-                        <span><strong>Web & API:</strong></span>
-                        <div class="container mt-3">
-                            <p>REST API, Stripe API, AWS S3 API, Cloudinary API</p>
-                        </div>
-                    </div>
-                    <div class="container mb-4 text-center">
-                        <span><strong>Environment:</strong></span>
-                        <div class="container mt-3">
-                            <p> Node.js, Linux, Windows</p>
-                        </div>
-                    </div>
-                    <div class="container mb-4 text-center">
-                        <span><strong>Database:</strong></span>
-                        <div class="container mt-3">
-                            <p> MongoDB, MySQL, SQLite</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-sm-5 section-title text-center">Skills</div>
+          <div class="col-md-6 section-content justify-content-center">
+            <div class="container mb-4 text-center">
+              <span><strong>Language:</strong></span>
+              <div class="container mt-3">
+                <p>C++, JavaScript, Python</p>
+              </div>
             </div>
+            <div class="container mb-4 text-center">
+              <span><strong>Cloud & DevOp:</strong></span>
+              <div class="container mt-3">
+                <p>AWS (S3), Railway, CI/CD, Git/GitHub, Cloudinary</p>
+              </div>
+            </div>
+            <div class="container mb-4 text-center">
+              <span><strong>Databases:</strong></span>
+              <div class="container mt-3">
+                <p>MongoDB, MySQL</p>
+              </div>
+            </div>
+            <div class="container mb-4 text-center">
+              <span><strong>Frontend:</strong></span>
+              <div class="container mt-3">
+                <p>MongoDB, MySQL, SQLite</p>
+              </div>
+            </div>
+            <div class="container mb-4 text-center">
+              <span><strong>Payments & Fintech:</strong></span>
+              <div class="container mt-3">
+                <p>Stripe, PayPal, Coinbase</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="projects" class="content-section">
-        <div class="container">
-            <div class="row text-decoration-none">
-                <div class="col-md-6 mb-5 section-title text-center">Projects</div>
-                <div class="col-md-6 py-3 section-content">
-                    <div class="mb-5">
-                        <p><a href="https://terrarium.primewaytrading.net" target="_blank">Clover Terrarium</a></p>
-                    </div>
-                    <div class="mb-5">
-                        <p><a href="https://lilimartinez23.github.io/acm/" target="_blank">ACM TAMUSA</a></p>
-                    </div>
-                    <div class="mb-5">
-                        <p><a href="https://vimeo.com/1060567666/dd6be4aa2b">Arduino Piano</a></p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row text-decoration-none">
+          <div class="col-md-6 mb-5 section-title text-center">Projects</div>
+          <div class="col-md-6 py-3 section-content">
+            <div class="mb-5">
+              <p>
+                <a href="https://terrarium-studio.net/" target="_blank"
+                  >Clover Terrarium</a
+                >
+              </p>
             </div>
+            <div class="mb-5">
+              <p>
+                <a href="https://github.com/OscarSammm/JagUnify">Jag Unify</a>
+              </p>
+            </div>
+            <div class="mb-5">
+              <p>
+                <a href="https://vimeo.com/1060567666/dd6be4aa2b"
+                  >Arduino Piano</a
+                >
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="contact" class="content-section border-start-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 text-center section-content">
-                    <div class="col-sm-12 d-lg-flex justify-content-md-center">
-                        <div class="col-md-6 mb-2 ms-md-5">
-                            <p class="m-0"><strong>Email:</strong></p>
-                        </div>
-                        <div class="col-md-6 mb-4 ms-md-5">
-                            <p class="m-0">
-                                <span class="redacted" id="email">Click to Reveal</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 d-lg-flex justify-content-md-center">
-                        <div class="col-md-6 mb-2 ms-md-5">
-                            <p class="m-0"><strong>LinkedIn:</strong></p>
-                        </div>
-                        <div class="col-md-6 mb-3 ms-md-5">
-                            <p class="m-0">
-                                <span class="redacted" id="linkedin">Click to Reveal</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 section-title border-start-0">
-                    <div class="row justify-content-center border-start-0">
-                        <div class="col-md-8 me-md-5">
-                            <h2 class="text-center mb-4">Contact Me</h2>
-                            <form id="contactForm" action="https://formspree.io/f/maneypol" method="POST">
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="name" name="name"
-                                        placeholder="Your Name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Your Email" id="emailForm"
-                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <textarea class="form-control" id="message" name="message" rows="4"
-                                        placeholder="Your message" required></textarea>
-                                </div>
-                                <div class="container d-flex justify-content-center">
-                                    <div class="form-check d-flex align-items-center w-auto flex-nowrap">
-                                        <input type="checkbox" class="form-check-input" id="agreeCheckbox"
-                                            style="transform: scale(0.6); margin-top: 0;">
-                                        <label class="form-check-label text-center" for="agreeCheckbox"
-                                            style="font-size: 14px">
-                                            I AM NOT A ROBOT
-                                        </label>
-                                    </div>
-                                </div>
-                                <div id="response-message" class="text-center mt-3">
-                                    <button type="submit" class="btn btn-primary" id="submitButton" disabled>
-                                        Send Message
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 text-center section-content">
+            <div class="col-sm-12 d-lg-flex justify-content-md-center">
+              <div class="col-md-6 mb-2 ms-md-5">
+                <p class="m-0"><strong>Email:</strong></p>
+              </div>
+              <div class="col-md-6 mb-4 ms-md-5">
+                <p class="m-0">
+                  <span class="redacted" id="email">Click to Reveal</span>
+                </p>
+              </div>
             </div>
+            <div class="col-sm-12 d-lg-flex justify-content-md-center">
+              <div class="col-md-6 mb-2 ms-md-5">
+                <p class="m-0"><strong>LinkedIn:</strong></p>
+              </div>
+              <div class="col-md-6 mb-3 ms-md-5">
+                <p class="m-0">
+                  <span class="redacted" id="linkedin">Click to Reveal</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 section-title border-start-0">
+            <div class="row justify-content-center border-start-0">
+              <div class="col-md-8 me-md-5">
+                <h2 class="text-center mb-4">Contact Me</h2>
+                <form
+                  id="contactForm"
+                  action="https://formspree.io/f/maneypol"
+                  method="POST"
+                >
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your Email"
+                      id="emailForm"
+                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      name="message"
+                      rows="4"
+                      placeholder="Your message"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="container d-flex justify-content-center">
+                    <div
+                      class="form-check d-flex align-items-center w-auto flex-nowrap"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="agreeCheckbox"
+                        style="transform: scale(0.6); margin-top: 0"
+                      />
+                      <label
+                        class="form-check-label text-center"
+                        for="agreeCheckbox"
+                        style="font-size: 14px"
+                      >
+                        I AM NOT A ROBOT
+                      </label>
+                    </div>
+                  </div>
+                  <div id="response-message" class="text-center mt-3">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      id="submitButton"
+                      disabled
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <script src="script.js"></script>
     <script src="secureData.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-<footer>
-    <div class="footer bg-black text-white py-3 text-center">&copy; 2025 - Made by T. Do</div>
-</footer>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <footer>
+    <div class="footer bg-black text-white py-3 text-center">
+      &copy; 2025 - Made by T. Do
+    </div>
+  </footer>
 </html>
